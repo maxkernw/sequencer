@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fett</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 2rem;
+            background: #2a9d8f;
+            font-size: 25px;
+        }
+
+        #bar {
+            outline: 4px solid #f4a261;
+            background-color: #264653;
+            height: 40px;
+            transition: all .2s;
+            box-shadow: 10px 4px 1px black;
+        }
+
+        .mac-drum {
+            margin-bottom: 2rem;
+        }
+
+        input[type='range'] {
+            overflow: hidden;
+            -webkit-appearance: none;
+            background-color: #e9c46a;
+        }
+
+        input[type='range']::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            color: #13bba4;
+            margin-top: -1px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            width: 10px;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+            background: #2a9d8f;
+            box-shadow: -20px 0 0 20px #264653;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            grid-gap: 10px;
+        }
+
+        #drum-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 4px;
+            margin-bottom: 5px;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 4px;
+            margin-bottom: 5px;
+            ;
+        }
+
+        .synth-container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            width: auto;
+        }
+
+        .mute {
+            outline: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+    </script>
+    <div class="controls">
+        <input type="range" id="bpm" value="120" name="bpm" min="0" max="1000">
+        <label for="bpm">BPM</label>
+        <span class="value"></span>
+    </div>
+
+    <div class="controls">
+        <input type="range" id="grids" value="1" name="grids" min="0" max="20">
+        <label for="bpm">SYNTH GRIDS</label>
+        <span class="value"></span>
+    </div>
+    <div class="synth-container">
+        <h1>SYNTH</h1>
+        <div id="container" class="container-1">
+
+        </div>
+    </div>
+
+    <div class="mac-drum">
+        <h1>DRUMS</h1>
+    </div>
+
+    <script src="/bundle.js"></script>
+</body>
+
+</html>
